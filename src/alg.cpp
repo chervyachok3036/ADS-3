@@ -7,8 +7,7 @@ uint64_t collatzMaxValue(uint64_t num) {
   while (num != 1) {
     if (num % 2 == 0) {
       num /= 2;
-    }
-    else {
+    } else {
       num = 3 * num + 1;
     }
     if (num >= m) {
@@ -23,8 +22,7 @@ unsigned int collatzLen(uint64_t num) {
   while (num != 1) {
     if (num % 2 == 0) {
       num /= 2;
-    }
-    else {
+    } else {
       num = 3 * num + 1;
     }
     ++len;
@@ -42,8 +40,7 @@ unsigned int seqCollatz(unsigned int* maxlen,
     if (len > *maxlen) {
       *maxlen = len;
       num = i;
-    }
-    else if ((len == *maxlen) && (collatzMaxValue(i) > collatzMaxValue(num))) {
+    } else if ((len == *maxlen) && (collatzMaxValue(i) > collatzMaxValue(num))) {
       *maxlen = len;
       num = i;
     }
