@@ -40,7 +40,8 @@ unsigned int seqCollatz(unsigned int* maxlen,
     if (len > *maxlen) {
       *maxlen = len;
       num = i;
-    } else if ((len == *maxlen) && (collatzMaxValue(i) > collatzMaxValue(num))) {
+    } else if ((len == *maxlen) &&
+      (collatzMaxValue(i) > collatzMaxValue(num))) {
       *maxlen = len;
       num = i;
     }
